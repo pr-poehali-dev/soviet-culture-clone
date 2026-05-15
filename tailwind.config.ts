@@ -18,12 +18,12 @@ export default {
 				'2xl': '1400px'
 			}
 		},
-		fontFamily: {
+		extend: {
+			fontFamily: {
 				'display': ['Oswald', 'sans-serif'],
 				'body': ['Cormorant Garamond', 'serif'],
 				'mono': ['IBM Plex Mono', 'monospace'],
 			},
-		extend: {
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
