@@ -4,41 +4,43 @@
 
 @layer base {
   :root {
-    --background: 35 15% 96%;
-    --foreground: 0 0% 8%;
+    --background: 0 0% 96%;
+    --foreground: 0 0% 5%;
 
-    --card: 35 20% 93%;
-    --card-foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
 
-    --popover: 35 20% 93%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
 
-    --primary: 0 85% 40%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 90% 42%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 30% 88%;
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 5%;
 
-    --muted: 35 20% 88%;
-    --muted-foreground: 0 0% 35%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 45 90% 50%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 35 15% 78%;
-    --input: 35 15% 78%;
-    --ring: 0 85% 40%;
+    --border: 0 0% 78%;
+    --input: 0 0% 78%;
+    --ring: 0 90% 42%;
 
     --radius: 0rem;
 
-    --soviet-red: #c0392b;
-    --soviet-dark: #1a0f0f;
-    --soviet-cream: #f5f0e8;
-    --soviet-gold: #d4a843;
-    --soviet-charcoal: #2c2c2c;
+    /* Авангард 1920-30-х: чисто, жёстко, геометрично */
+    --soviet-red: #d62b2b;
+    --soviet-dark: #0d0d0d;
+    --soviet-cream: #f0ede6;
+    --soviet-gold: #f5c518;
+    --soviet-charcoal: #1a1a1a;
+    --soviet-white: #f7f7f5;
   }
 }
 
@@ -55,29 +57,27 @@
   }
 }
 
-/* Soviet pattern overlay */
+/* Авангардная фактура — тонкая сетка как типографская бумага */
 .soviet-texture {
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.015) 2px,
-    rgba(0, 0, 0, 0.015) 4px
-  );
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-color: var(--soviet-cream);
 }
 
-/* Constructivist diagonal stripe */
+/* Диагональная штриховка — острее, крупнее */
 .diagonal-stripe {
   background: repeating-linear-gradient(
     -45deg,
     transparent,
-    transparent 10px,
-    rgba(192, 57, 43, 0.08) 10px,
-    rgba(192, 57, 43, 0.08) 20px
+    transparent 14px,
+    rgba(214, 43, 43, 0.07) 14px,
+    rgba(214, 43, 43, 0.07) 28px
   );
 }
 
-/* Star decoration */
+/* Звезда */
 .soviet-star::before {
   content: "★";
   color: var(--soviet-red);
@@ -115,15 +115,15 @@
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.7s ease-out forwards;
+  animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.6s ease-out forwards;
+  animation: slideInLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .delay-100 {
@@ -151,10 +151,10 @@
   opacity: 0;
 }
 
-/* Red underline hover effect */
+/* Навигация — резкая подсветка снизу */
 .nav-link {
   position: relative;
-  transition: color 0.2s;
+  transition: color 0.15s;
 }
 
 .nav-link::after {
@@ -164,8 +164,8 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--soviet-red);
-  transition: width 0.3s ease;
+  background: var(--soviet-gold);
+  transition: width 0.25s ease;
 }
 
 .nav-link:hover::after,
@@ -173,19 +173,19 @@
   width: 100%;
 }
 
-/* Card hover */
+/* Карточки — сдвиг + жёсткая тень */
 .course-card {
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .course-card:hover {
-  transform: translateY(-4px);
+  transform: translate(-3px, -3px);
   box-shadow: 6px 6px 0px var(--soviet-red);
 }
 
-/* Red border accent */
+/* Красная левая полоса */
 .red-accent-left {
   border-left: 4px solid var(--soviet-red);
 }

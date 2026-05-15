@@ -1,7 +1,7 @@
 import Icon from "@/components/ui/icon";
 import { Lang, translations } from "./translations";
 
-const IMG_PAINTING = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/8d9964ad-0e86-40ed-b45f-05c0df3e5385.jpg";
+const IMG_PAINTING = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/5ddf4502-1f2d-4c6e-860a-6a82eafa1957.jpg";
 
 interface ArticleSectionProps {
   lang: Lang;

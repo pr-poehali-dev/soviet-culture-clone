@@ -1,8 +1,8 @@
 import Icon from "@/components/ui/icon";
 import { Lang, translations } from "./translations";
 
-const IMG_HERO = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/7393a300-7e3c-4256-b663-4bce54f4eace.jpg";
-const IMG_ARCH = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/32db735e-57c8-427e-be13-840cc5095797.jpg";
+const IMG_HERO = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/179cabb6-a801-4865-8c48-e8f597973f61.jpg";
+const IMG_ARCH = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/1abb08cc-9776-4281-917e-c4ace9046077.jpg";
 
 interface HeroSectionProps {
   lang: Lang;
