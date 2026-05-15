@@ -15,6 +15,11 @@ const IMG_POSTER      = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-917
 const IMG_MELNIKOV    = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/e6216e14-65c4-4598-9264-8c9c338e1d6e.jpg";
 const IMG_EISENSTEIN  = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/94a96145-c6f3-416f-a6fb-67b41af7119d.jpg";
 const IMG_KHLEBNIKOV  = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/1492642a-f7f9-44af-8de4-226f33ee9b32.jpg";
+const IMG_GINZBURG    = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/b670ff31-5da0-4966-b214-a138d9cdaeee.jpg";
+const IMG_MELNIKOV_HOUSE = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/9b06d2c8-7045-4715-9169-3d77d1044d9d.jpg";
+const IMG_NARKOMFIN   = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/7724df30-db8d-46a2-a808-eade740c1617.jpg";
+const IMG_WORKERS_CLUB = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/bf0f85e0-539b-43ca-9378-01200e2ed057.jpg";
+const IMG_ARCH_FACADE  = "https://cdn.poehali.dev/projects/8a250f04-d23b-47f7-9175-b68b0f5c995e/files/4c82caeb-111f-4632-ad3a-21ded9cb763d.jpg";
 
 // Rutube embed IDs — публичные фильмы из открытого доступа
 const RUTUBE_VERTOV      = "929254b24755d8852f15981c60995663"; // Человек с киноаппаратом
@@ -116,24 +121,57 @@ const SECTIONS = {
       id: "architecture",
       tag: "Архитектура",
       title: "Строить новый мир буквально",
-      lead: "Советские архитекторы 1920-х были убеждены, что пространство формирует человека. Новые здания должны воплощать новые отношения между людьми — коллективный быт, равенство, прозрачность.",
+      lead: "Советские архитекторы 1920-х были убеждены, что пространство формирует человека. За десятилетие они создали целый арсенал новых типологий: рабочий клуб, дом-коммуна, фабрика-кухня, дом культуры — каждый тип был манифестом нового быта.",
       figures: [
         {
           name: "Константин Мельников",
           years: "1890–1974",
           role: "Архитектор, мастер конструктивизма",
           img: IMG_MELNIKOV,
-          desc: "Самый дерзкий архитектор эпохи. Построил шесть рабочих клубов в Москве — каждый уникален. Его собственный дом-цилиндр на Арбате до сих пор стоит и является единственным частным домом, построенным в СССР для самого архитектора.",
+          desc: "Самый дерзкий архитектор эпохи. Построил шесть рабочих клубов в Москве — каждый уникален. Его собственный дом-цилиндр на Арбате, с шестиугольными окнами и двумя переплетёнными цилиндрами, — единственный частный дом, построенный в СССР для самого архитектора. Стоит до сих пор.",
+          rutube: null,
+          rutubeTitle: null,
+        },
+        {
+          name: "Моисей Гинзбург",
+          years: "1892–1946",
+          role: "Архитектор, теоретик функционализма",
+          img: IMG_GINZBURG,
+          desc: "Основатель ОСА — Объединения современных архитекторов. Главный теоретик советского функционализма. Его дом Наркомфина (1930) — эксперимент коллективного быта с ячейками разных типов, общей столовой и крышей-террасой — предвосхитил «Жилую единицу» Ле Корбюзье на 20 лет.",
           rutube: null,
           rutubeTitle: null,
         },
       ],
       artworks: [
         {
+          title: "Дом Мельникова на Арбате",
+          year: "1927–1929",
+          img: IMG_MELNIKOV_HOUSE,
+          desc: "Два переплетённых цилиндра, 150 шестиугольных окон, несущие стены из кирпичной кладки без перемычек. Архитектурное чудо, построенное на государственной земле как частный эксперимент. Ныне — объект культурного наследия федерального значения.",
+        },
+        {
+          title: "Дом Наркомфина",
+          year: "1928–1930",
+          img: IMG_NARKOMFIN,
+          desc: "«Социальный конденсатор» Гинзбурга и Милиниса. Здание на пилотах, двухуровневые квартиры-ячейки, крытые переходы, общая столовая и прачечная. Реставрировано в 2020 году, признано памятником архитектуры мирового значения.",
+        },
+        {
+          title: "Рабочие клубы Москвы",
+          year: "1927–1929",
+          img: IMG_WORKERS_CLUB,
+          desc: "Мельников построил шесть рабочих клубов за три года: клуб Русакова с консольными залами, клуб Зуева с угловым остеклением, клуб Свердлова с трансформируемым залом. Каждый — радикальный эксперимент с пространством и конструкцией.",
+        },
+        {
+          title: "Конструктивистские фасады",
+          year: "1925–1932",
+          img: IMG_ARCH_FACADE,
+          desc: "Советский конструктивизм отличала принципиальная антидекоративность: фасад — отражение внутренней структуры. Горизонтальные ленточные окна, угловые остекления, асимметричные объёмы — всё это работало как визуальный манифест.",
+        },
+        {
           title: "ВХУТЕМАС — советский Баухаус",
           year: "1920–1930",
           img: IMG_ARCH,
-          desc: "Высшие художественно-технические мастерские воспитали целое поколение конструктивистов. Родченко, Попова, Веснин преподавали здесь. Методика ВХУТЕМАСа повлияла на дизайн-образование по всему миру.",
+          desc: "Высшие художественно-технические мастерские воспитали целое поколение конструктивистов. Родченко, Попова, Веснин преподавали здесь. Вводный курс ВХУТЕМАСа — «Пространство», «Цвет», «Графика» — стал прообразом базового курса Баухауса и современных дизайн-школ.",
         },
       ],
     },
@@ -242,24 +280,57 @@ const SECTIONS = {
       id: "architecture",
       tag: "Architecture",
       title: "Building a New World, Literally",
-      lead: "Soviet architects of the 1920s were convinced that space shapes people. New buildings had to embody new human relations — collective life, equality, transparency.",
+      lead: "Soviet architects of the 1920s were convinced that space shapes people. In a decade they created an entire arsenal of new building types: workers' club, commune house, factory-kitchen, house of culture — each type was a manifesto of a new way of life.",
       figures: [
         {
           name: "Konstantin Melnikov",
           years: "1890–1974",
           role: "Architect, master of constructivism",
           img: IMG_MELNIKOV,
-          desc: "The boldest architect of the era. Built six workers' clubs in Moscow — each unique. His own cylindrical house on Arbat still stands and is the only private house built in the USSR for the architect himself.",
+          desc: "The boldest architect of the era. Built six workers' clubs in Moscow — each unique. His own cylindrical house on Arbat, with hexagonal windows and two interlocking cylinders, is the only private house built in the USSR for the architect himself. It still stands today.",
+          rutube: null,
+          rutubeTitle: null,
+        },
+        {
+          name: "Moisei Ginzburg",
+          years: "1892–1946",
+          role: "Architect, theorist of functionalism",
+          img: IMG_GINZBURG,
+          desc: "Founder of OSA — the Union of Contemporary Architects. Chief theorist of Soviet functionalism. His Narkomfin House (1930) — an experiment in collective living with varied cell types, a shared canteen and a roof terrace — anticipated Le Corbusier's Unité d'Habitation by 20 years.",
           rutube: null,
           rutubeTitle: null,
         },
       ],
       artworks: [
         {
+          title: "Melnikov House on Arbat",
+          year: "1927–1929",
+          img: IMG_MELNIKOV_HOUSE,
+          desc: "Two interlocking cylinders, 150 hexagonal windows, load-bearing brick walls without lintels. An architectural miracle built on state land as a private experiment. Now a federal cultural heritage site.",
+        },
+        {
+          title: "Narkomfin House",
+          year: "1928–1930",
+          img: IMG_NARKOMFIN,
+          desc: "Ginzburg and Milinis's 'social condenser'. A building on pilotis, duplex cell-apartments, covered walkways, a shared canteen and laundry. Restored in 2020, recognised as an architectural monument of world significance.",
+        },
+        {
+          title: "Moscow Workers' Clubs",
+          year: "1927–1929",
+          img: IMG_WORKERS_CLUB,
+          desc: "Melnikov built six workers' clubs in three years: the Rusakov Club with cantilevered auditoriums, the Zuev Club with corner glazing, the Sverdlov Club with a transformable hall. Each was a radical experiment with space and structure.",
+        },
+        {
+          title: "Constructivist Facades",
+          year: "1925–1932",
+          img: IMG_ARCH_FACADE,
+          desc: "Soviet constructivism was defined by its principled anti-decorativeness: the facade is a reflection of the internal structure. Horizontal ribbon windows, corner glazing, asymmetric volumes — all functioned as visual manifestos.",
+        },
+        {
           title: "VKHUTEMAS — the Soviet Bauhaus",
           year: "1920–1930",
           img: IMG_ARCH,
-          desc: "The Higher Art and Technical Studios raised a whole generation of constructivists. Rodchenko, Popova, Vesnin taught here. The VKHUTEMAS methodology influenced design education worldwide.",
+          desc: "The Higher Art and Technical Studios raised a whole generation of constructivists. Rodchenko, Popova, Vesnin taught here. The VKHUTEMAS introductory course — 'Space', 'Colour', 'Graphics' — became the prototype for the Bauhaus foundation course and modern design schools.",
         },
       ],
     },
@@ -400,9 +471,19 @@ export default function Index() {
             <p className="font-body text-white/65 leading-relaxed mb-10 animate-fade-in-up delay-400" style={{ fontSize: "1.15rem", maxWidth: "560px" }}>
               {t.hero.desc}
             </p>
-            <div className="flex items-baseline gap-4 animate-fade-in-up delay-500">
+            <div className="flex items-baseline gap-4 mb-10 animate-fade-in-up delay-500">
               <span className="font-display font-bold text-4xl" style={{ color: "var(--soviet-gold)" }}>{t.hero.years}</span>
               <span className="font-mono text-xs tracking-widest text-white/40 uppercase">{t.hero.yearsLabel}</span>
+            </div>
+            <div className="animate-fade-in-up delay-600">
+              <button
+                onClick={() => setLang(lang === "ru" ? "en" : "ru")}
+                className="inline-flex items-center gap-3 font-display font-bold text-sm tracking-[0.15em] px-6 py-3 transition-all hover:opacity-80"
+                style={{ border: "2px solid var(--soviet-gold)", color: "var(--soviet-gold)" }}
+              >
+                <Icon name="Globe" size={16} />
+                {lang === "ru" ? "READ IN ENGLISH" : "ЧИТАТЬ НА РУССКОМ"}
+              </button>
             </div>
           </div>
         </div>
